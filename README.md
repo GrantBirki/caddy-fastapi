@@ -1,4 +1,4 @@
-# caddy-fastapi
+# caddy-fastapi ⛳
 
 This is a template repo to deploy [Caddy](https://caddyserver.com/) + [FastAPI](https://fastapi.tiangolo.com/) with docker-compose
 
