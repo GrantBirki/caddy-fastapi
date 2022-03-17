@@ -1,0 +1,7 @@
+__pycache__
+creds.env
+*.pem
+
+# container volume files
+data/*
+!data/.gitkeep
