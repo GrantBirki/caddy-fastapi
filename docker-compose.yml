@@ -11,6 +11,12 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - 8000:8000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 5m
+      timeout: 5s
+      retries: 3
+      start_period: 15s
 
   caddy:
     container_name: caddy
