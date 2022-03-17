@@ -2,6 +2,7 @@ FROM python:alpine3.15
 
 WORKDIR /app
 
+# Install curl for healthchecks
 RUN apk add curl
 
 # Setup a nonroot user for security
