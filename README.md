@@ -61,3 +61,7 @@ If you set the `DOMAIN` variable, Caddy will attempt to provision a certificate 
 ### Disclaimer
 
 This repo is extremely simple on purpose. You should tailor this to your needs if you plan on adapting it for production usage of any kind.
+
+That being said, I will admit that I am currently running this setup (fastapi swapped for nodejs stack because the API was already written in JS) in production and it is working great for me. I'm just running this docker-compose stack on a 2vCPU/4GB memory VM in Azure and its handling traffic just fine. Here is a 30 day snapshot of general metrics for this setup:
+
+![Azure Metrics](./docs/assets/metrics.png)
