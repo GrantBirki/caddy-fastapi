@@ -1,0 +1,35 @@
+name: test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: test
+        run: |
+          # start the stack
+          make run
+
+          # do a basic health check
+          curl -f http://localhost:8000/health
+
+          # check the output of the root path (/) on the fast-api server while going through Caddy
+          output=$(curl -f http://localhost:8000/ | jq -r ."Hello")
+          if [ "$output" == "World" ]; then
+            echo "Test passed"
+          else
+            echo "Test failed"
+          fi
