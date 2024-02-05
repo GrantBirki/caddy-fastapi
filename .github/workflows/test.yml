@@ -23,6 +23,9 @@ jobs:
           # start the stack
           make run
 
+          # sleep for a few seconds so things can start up
+          sleep 5
+
           # do a basic health check
           curl -f http://localhost:8000/health
 
