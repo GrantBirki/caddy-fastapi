@@ -1,5 +1,7 @@
 # caddy-fastapi ⛳
 
+[![test](https://github.com/GrantBirki/caddy-fastapi/actions/workflows/test.yml/badge.svg)](https://github.com/GrantBirki/caddy-fastapi/actions/workflows/test.yml)
+
 This is a template repo to deploy [Caddy](https://caddyserver.com/) + [FastAPI](https://fastapi.tiangolo.com/) with docker-compose
 
 ## Usage 🔨
