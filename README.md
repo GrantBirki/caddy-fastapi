@@ -2,7 +2,7 @@
 
 [![test](https://github.com/GrantBirki/caddy-fastapi/actions/workflows/test.yml/badge.svg)](https://github.com/GrantBirki/caddy-fastapi/actions/workflows/test.yml)
 
-This is a template repo to deploy [Caddy](https://caddyserver.com/) + [FastAPI](https://fastapi.tiangolo.com/) with docker-compose
+This is a template repo to deploy [Caddy](https://caddyserver.com/) + [FastAPI](https://fastapi.tiangolo.com/) with docker compose
 
 ## Usage 🔨
 
@@ -12,7 +12,7 @@ To use this repo simply do the following:
 1. Run the following command:
 
     ```bash
-    docker-compose up --build
+    docker compose up --build
     ```
 
 1. Navigate to your domain: [localhost](https://localhost:443/)
@@ -31,10 +31,10 @@ Caddy automatically provisions TLS certificates for you. In order to make use of
     export DOMAIN=app.example.org
     ```
 
-1. Start the docker-compose stack:
+1. Start the docker compose stack:
 
    ```bash
-   docker-compose up --build
+   docker compose up --build
    ```
 
 1. Navigate to your domain and enjoy your easy TLS setup with Caddy! -> [https://app.example.org](https://app.example.orgg)
@@ -45,7 +45,7 @@ Here is some extra info about the setup
 
 ### Volumes 🛢️
 
-The docker-compose file creates two volumes:
+The docker compose file creates two volumes:
 
 - `./data/caddy_data:/data`
 - `./data/caddy_config:/config`
@@ -64,6 +64,6 @@ If you set the `DOMAIN` variable, Caddy will attempt to provision a certificate 
 
 This repo is extremely simple on purpose. You should tailor this to your needs if you plan on adapting it for production usage of any kind.
 
-That being said, I will admit that I am currently running this setup (fastapi swapped for nodejs stack because the API was already written in JS) in production and it is working great for me. I'm just running this docker-compose stack on a 2vCPU/4GB memory VM in Azure and its handling traffic just fine. Here is a 30 day snapshot of general metrics for this setup:
+That being said, I will admit that I am currently running this setup (fastapi swapped for nodejs stack because the API was already written in JS) in production and it is working great for me. I'm just running this docker compose stack on a 2vCPU/4GB memory VM in Azure and its handling traffic just fine. Here is a 30 day snapshot of general metrics for this setup:
 
 ![Azure Metrics](./docs/assets/metrics.png)
