@@ -5,3 +5,5 @@ creds.env
 # container volume files
 data/*
 !data/.gitkeep
+
+aws/
